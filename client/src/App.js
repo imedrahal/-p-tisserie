@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import Home from "./Home";
+import FollowUs from "./FollowUs/FollowUs"
+import OurSkills from"./OurSkills/OurSkills"
+import TeamSection from './TeamSection/TeamSection'
+import Carousel from './Carousel/Carousel'
 function App() {
   const [message, setMessage] = useState('');
 
@@ -12,8 +16,12 @@ function App() {
 
   return (
     <div>
-      <h1>React Frontend</h1>
-      <p>{message}</p>
+    
+    <Home />
+    <Carousel/>
+    <TeamSection/>
+    <OurSkills/>
+     <FollowUs />
     </div>
   );
 }

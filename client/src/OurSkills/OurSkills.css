@@ -1,0 +1,162 @@
+.follow-section {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.follow-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.icon-divider {
+  height: 1px;
+  width: 80px;
+  margin: 0 auto 40px auto;
+  background: #ccc;
+  position: relative;
+}
+
+.icon-divider::before {
+  content: \"\\f1b9\"; /* FontAwesome car icon (optional) */
+  font-family: 'Font Awesome 5 Free'; /* Only if you use FA directly */
+  font-weight: 900;
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #aaa;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.icon {
+  font-size: 28px;
+  padding: 20px;
+  border-radius: 50%;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Specific brand colors */
+.fb    { background: #3b5998; }
+.twitter { background: #55acee; }
+.google  { background: #dd4b39; }
+.flickr  { background: #ff0084; }
+.insta   { background: #517fa4; }
+.vimeo   { background: #1ab7ea; }
+.wave-divider {
+  position: relative;
+  margin-top: 60px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+.scallop-border {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: 50px;
+}
+
+.scallop-border svg {
+  display: block;
+  width: 100%;
+  height: 50px;
+}
+
+.Background-FollowUs{
+    /* background-image: url("../../public/img-footer.jpg"); */
+    background-size: cover;
+    background-position: center;
+}
+.title {
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* espace sous le texte */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* largeur de la ligne */
+  height: 2px;  /* épaisseur de la ligne */
+  background-color: rgba(255, 255, 255, 0.7); /* blanc doux */
+  border-radius: 2px;
+}
+
+.subtitle{
+    font-size: 20px;
+    max-width: 55%;
+    margin-left: 25px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0;
+}
+
+.progress-container {
+  margin-left: 45px;
+  padding: 20px;
+  width:50%;
+  border-radius: 8px;
+  font-family: Georgia, serif;
+  color: white;
+  align-content: center;
+}
+
+.progress-group {
+  margin-bottom: 20px;
+}
+
+.progress-group p {
+  margin: 0 0 8px 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.progress-bar {
+  background-color: #fff;
+  border-radius: 12px;
+  height: 24px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px #b07aa2;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #e6a8c7,
+    #e6a8c7 10px,
+    #d78fbf 10px,
+    #d78fbf 20px
+  );
+  border-radius: 12px 0 0 12px;
+  transition: width 0.6s ease;
+}
+
