@@ -1,0 +1,91 @@
+.pricing-section {
+  background-image: url(http://www.nicdark-themes.com/themes/food/wp/demo/sweet-cake/wp-content/uploads/sites/2/2019/04/green-bg.png?id=116) !important;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Lora', serif;
+}
+
+.pricing-title {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #fff;
+  position: relative;
+  font-family: 'Pacifico', cursive;
+}
+
+.pricing-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.price-card {
+  background: white;
+  width: 220px;
+  border-radius: 8px;
+  padding: 20px 15px 30px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.medal {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+}
+
+.medal img {
+  width: 100%;
+}
+
+.price-info {
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+.description-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.view-btn {
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+  opacity: 0.9;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.price-card:hover .medal-img {
+  animation: rotate 0.8s ease;
+}
+@media (max-width: 768px) {
+    .pricing-grid {
+        gap:75px;
+    }
+}

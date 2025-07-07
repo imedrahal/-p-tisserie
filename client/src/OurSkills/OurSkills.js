@@ -3,8 +3,9 @@ import "./OurSkills.css";
 import { FaFacebookF, FaTwitter, FaGooglePlusG, FaFlickr, FaInstagram, FaVimeoV } from "react-icons/fa";
 import { FaCandyCane ,FaBirthdayCake} from "react-icons/fa"; // Icône de bonbon style Noël
 import imgBackground from "../assets/pink-bg.png";
-
-
+import skill1 from"../assets/skill1.png"
+import skill2 from"../assets/skill2.png"
+import skill3 from"../assets/skill3.png"
 const FollowUs = () => {
       const skills = [
     { label: "Sweet Maccarons", value: 65 },
@@ -20,12 +21,14 @@ const FollowUs = () => {
     <h1>
         Our Skills  
              <FaCandyCane style={{marginLeft:"20px"}}/>             
+    
     </h1>
-    <div style={{display:"flex",width: "65%",margin:"auto",paddingBottom: "80px",}}> 
-        <div style={{display: "block",borderRight: "2px solid rgba(255, 255, 255, 0.4)",paddingRight: "20px" /* ✅ garde un peu d'espace interne */
-}}>
-             <div style={{display:"flex"}}>
-        <FaBirthdayCake style={{height:"auto"}}/>
+<div className="skills-content" style={{ display: "flex", width: "70%", margin: "auto", paddingBottom: "80px" }}>
+<div className="skills-left" style={{ display: "block", borderRight: "2px solid rgba(255, 255, 255, 0.4)", paddingRight: "20px" }}>
+
+             <div style={{display:"flex",alignItems: "center"}}>
+       
+                 <img src={skill1}  className="" style={{height:"80px",width:"80px"}}/>
        <div style={{display:"block",textAlign: "left"}}>
          <span style={{color:"black",fontSize: "25px",marginLeft:"25px"}}> Cake design</span>
         <p className="subtitle">
@@ -33,8 +36,8 @@ const FollowUs = () => {
         </p>
         </div>
     </div>
-    <div style={{display:"flex"}}>
-        <FaBirthdayCake style={{height:"auto"}}/>
+    <div style={{display:"flex",alignItems: "center"}}>
+           <img src={skill2}  className="" style={{height:"80px",width:"80px"}}/>
       <div style={{display:"block",textAlign: "left"}}>
          <span style={{color:"black",fontSize: "25px",marginLeft:"25px"}}> Cake design</span>
         <p className="subtitle">
@@ -42,8 +45,8 @@ const FollowUs = () => {
         </p>
         </div>
     </div>
-    <div style={{display:"flex"}}>
-        <FaBirthdayCake style={{height:"auto"}}/>
+    <div style={{display:"flex",alignItems: "center"}}>
+           <img src={skill3}  className="" style={{height:"80px",width:"80px"}}/>
         <div style={{display:"block",textAlign: "left"}}>
          <span style={{color:"black",fontSize: "25px",marginLeft:"25px"}}> Cake design</span>
         <p className="subtitle">

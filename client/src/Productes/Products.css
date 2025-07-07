@@ -1,0 +1,73 @@
+.features-grid-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 50px 0px 66px 0px;
+}
+
+.product-cart {
+ text-align: center;
+ font-family: 'Pacifico', cursive;
+}
+
+.feature-item:hover {
+  transform: translateY(-4px);
+}
+
+.icon {
+  font-size: 28px;
+  /* color: #e91e63; */
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.text-Products {
+  font-size: 16px;
+ font-family: 'Pacifico', cursive;
+  color:white;
+}
+.team-title {
+  font-size: 36px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 40px;
+  position: relative;
+   font-family: 'Pacifico', cursive;
+   text-align: center;
+}
+
+.service-title{
+  font-size: 21px;
+  color: #333;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+}
+
+.Background-products{
+    background-size: cover;
+    background-position: center;
+}
+@media (max-width: 768px) {
+    .features-grid-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+  /* .features-grid {
+    padding: 20px;
+  } */
+
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .Service-img {
+    margin-bottom: 10px;
+  }
+}
