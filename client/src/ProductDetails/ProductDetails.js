@@ -1,10 +1,11 @@
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaShoppingCart } from "react-icons/fa";
 import "./ProductDetails.css";
-import  React, { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { CartContext } from "../CartContext";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 const productsData = [
   {
     id: 1,
@@ -46,41 +47,75 @@ const productsData = [
     category: "Cupcake",
     description: "Cherry-flavored cupcake, light and delicious.",
   },
+  {
+    id: 6,
+    name: "Vanilla Cake",
+    price: 30.0,
+    image: "https://www.nicdark-themes.com/themes/food/wp/demo/sweet-cake/wp-content/uploads/sites/2/2019/04/shop3.jpg",
+    category: "Cakes",
+    description: "Soft vanilla cake with buttercream.",
+  },
+  {
+    id: 7,
+    name: "Chocolate Tart",
+    price: 28.0,
+    image: "https://www.nicdark-themes.com/themes/food/wp/demo/sweet-cake/wp-content/uploads/sites/2/2019/04/shop2.jpg",
+    category: "Tarts",
+    description: "Rich chocolate tart with crispy base.",
+  },
+  {
+    id: 8,
+    name: "Strawberry Donuts",
+    price: 20.0,
+    image: "https://www.nicdark-themes.com/themes/food/wp/demo/sweet-cake/wp-content/uploads/sites/2/2019/04/shop6.jpg",
+    category: "Donuts",
+    description: "Strawberry glazed donuts, fresh and soft.",
+  },
+  {
+    id: 9,
+    name: "Mini Cupcakes",
+    price: 16.0,
+    image: "https://www.nicdark-themes.com/themes/food/wp/demo/sweet-cake/wp-content/uploads/sites/2/2019/04/shop9.jpg",
+    category: "Cupcakes",
+    description: "Mini cupcakes with vanilla frosting.",
+  },
 ];
 
 const ProductDetails = () => {
   const [product, setProduct] = useState(productsData[1]);
-  const [cart, setCart] = useState([]);
   const { addToCart } = useContext(CartContext);
+  const [startIndex, setStartIndex] = useState(0);
 
+  const handleAddToCart = () => {
+    const quantity = parseInt(document.querySelector("input[type='number']").value);
+    addToCart(product, quantity);
+    toast.success(`${product.name} (x${quantity}) ajouté au panier 🛒`, {
+      position: "top-center",
+      theme: "colored",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
 
-// const handleAddToCart = () => {
-//   setCart([...cart, product]);
-//   toast.success(`${product.name} (x1) ajouté au panier 🛒`, {
-//     position: "top-center",
-//     autoClose: 2000,
-//     hideProgressBar: false,
-//     closeOnClick: true,
-//     pauseOnHover: true,
-//     draggable: true,
-//     progress: undefined,
-//     theme: "colored",
-//   });
-// };
-const handleAddToCart = () => {
-  const quantity = parseInt(document.querySelector("input[type='number']").value);
-  addToCart(product, quantity);
-  toast.success(`${product.name} (x${quantity}) ajouté au panier 🛒`, {
-    position: "top-center",
-    theme: "colored",
-     autoClose: 2000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-  });
-};
+  const relatedProducts = productsData.filter((p) => p.id !== product.id);
+  const visibleProducts = relatedProducts.slice(startIndex, startIndex + 4);
+
+  const handleNext = () => {
+    if (startIndex + 4 < relatedProducts.length) {
+      setStartIndex(startIndex + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
+  };
+
   return (
     <div className="product-container">
       <div className="product-main">
@@ -104,29 +139,26 @@ const handleAddToCart = () => {
 
       <div className="related-section">
         <h3>Related products</h3>
-        <div className="related-grid">
-          {productsData
-            .filter((p) => p.id !== product.id)
-            .map((p) => (
+        <div className="carousel-controls">
+          <button className="carousel-btn" onClick={handlePrev} disabled={startIndex === 0}>
+            <FaChevronLeft />
+          </button>
+          <div className="related-grid">
+            {visibleProducts.map((p) => (
               <div className="related-card" key={p.id} onClick={() => setProduct(p)}>
                 <img src={p.image} alt={p.name} />
                 <h5>{p.name}</h5>
                 <p>${p.price.toFixed(2)}</p>
-                {/* <button onClick={(e) => { e.stopPropagation(); setCart([...cart, p]); }}>
-                  Add to Cart
-                </button> */}
               </div>
             ))}
+          </div>
+          <button className="carousel-btn" onClick={handleNext} disabled={startIndex + 4 >= relatedProducts.length}>
+            <FaChevronRight />
+          </button>
         </div>
       </div>
       <ToastContainer />
-      {/* <div className="floating-cart">
-  <FaShoppingCart size={28} color="#fff" />
-  <span className="cart-count">{cart.length}</span>
-</div> */}
-
     </div>
-    
   );
 };
 

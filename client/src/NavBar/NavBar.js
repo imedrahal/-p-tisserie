@@ -66,7 +66,7 @@ const Navbar = () => {
       </div>
         <li onClick={() => scrollToSection("TeamSection")} className="nav-title">Team</li>
         <li onClick={() => scrollToSection("OurSkills")} className="nav-title">Skills</li>
-        <li onClick={() => scrollToSection("OurPrice")} className="nav-title">Blog</li>
+        <li onClick={() => scrollToSection("FollowUs")} className="nav-title">Contact</li>
         <Link to="/product-details" style={{ textDecoration: "auto" }}>
           <li className="nav-title">Produit</li>
         </Link>

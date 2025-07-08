@@ -5,6 +5,7 @@
   overflow: hidden;
   margin: 30px auto;
   border-radius: 10px;
+  transition: all 0.5s ease-in-out; /* ➕ transition douce */
 }
 
 .carousel-image {
@@ -12,6 +13,19 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  animation: fadeZoom 1s ease-in-out; /* ➕ animation d’entrée */
+}
+
+/* Animation douce fade + zoom */
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .carousel-overlay {
@@ -45,6 +59,7 @@
 .animated-word:nth-child(1) { animation-delay: 0.3s; }
 .animated-word:nth-child(2) { animation-delay: 0.6s; }
 .animated-word:nth-child(3) { animation-delay: 0.9s; }
+/* ...ajoute plus si tu as plus de mots */
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
@@ -69,25 +84,4 @@
 
 .nav:hover {
   background: rgba(0, 0, 0, 0.5);
-}
-
-@media (max-width: 700px) {
-  .carousel {
-    height: 250px; /* moins de hauteur sur mobile */
-  }
-
-  .carousel-overlay {
-    padding: 20px; /* moins de padding */
-    height: 60%; /* un peu plus pour plus de place au texte */
-  }
-
-  .carousel-text {
-    font-size: 1.2rem; /* texte plus petit */
-    padding: 0 10px;
-  }
-
-  .nav {
-    font-size: 1.5rem;
-    padding: 8px 12px;
-  }
 }

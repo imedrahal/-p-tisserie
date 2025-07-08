@@ -203,3 +203,53 @@
   padding: 2px 6px;
   font-weight: bold;
 }
+.related-section {
+  margin-top: 40px;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 10px;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.related-grid {
+  display: flex;
+  gap: 15px;
+  overflow: hidden;
+}
+
+.related-card {
+  width: 180px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  background-color: white;
+}
+
+.related-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.related-card img {
+  width: 100%;
+  border-radius: 6px;
+}

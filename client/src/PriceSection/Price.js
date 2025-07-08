@@ -7,28 +7,28 @@ const prices = [
     price: 85,
     color: "#d9a8aa",
     color2:"#93bbb6",
-    icon: "https://www.nicdark-themes.com/themes/food/wp/demo/sweet-cake/wp-content/uploads/sites/2/2019/04/shop7.jpg", // remplace par tes images
+    icon: "https://www.nicdark-themes.com/themes/food/wp/demo/sweet-cake/wp-content/uploads/sites/2/2019/04/prices1.png", // remplace par tes images
   },
   {
     label: "Ice cream",
     price: 12,
     color: "#a4dce4",
     color2:"#93bbb6",
-    icon: "https://www.nicdark-themes.com/themes/food/wp/demo/sweet-cake/wp-content/uploads/sites/2/2019/04/shop4.jpg",
+    icon: "https://www.nicdark-themes.com/themes/food/wp/demo/sweet-cake/wp-content/uploads/sites/2/2019/04/prices2.png",
   },
   {
     label: "Cookies",
     price: 35,
     color: "#dfc68b",
     color2:"#93bbb6",
-    icon: "https://www.nicdark-themes.com/themes/food/wp/demo/sweet-cake/wp-content/uploads/sites/2/2019/04/shop5.jpg",
+    icon: "https://www.nicdark-themes.com/themes/food/wp/demo/sweet-cake/wp-content/uploads/sites/2/2019/04/prices3.png",
   },
   {
     label: "Brioche",
     price: 14,
     color: "#bde5bb",
     color2:"#93bbb6",
-    icon: "https://www.nicdark-themes.com/themes/food/wp/demo/sweet-cake/wp-content/uploads/sites/2/2019/04/shop1.jpg",
+    icon: "https://www.nicdark-themes.com/themes/food/wp/demo/sweet-cake/wp-content/uploads/sites/2/2019/04/prices4.png",
   },
 ];
 
@@ -49,9 +49,9 @@ const PricingSection = () => {
               <li>Lorem ipsum dolor sit</li>
            
             </ul>
-            <button className="view-btn" style={{ backgroundColor: item.color }}>
+            {/* <button className="view-btn" style={{ backgroundColor: item.color }}>
               View More
-            </button>
+            </button> */}
           </div>
         ))}
       </div>

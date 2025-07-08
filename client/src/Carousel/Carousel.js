@@ -48,7 +48,7 @@ const Carousel = () => {
 
   return (
     <div className="carousel">
-      <img src={slides[index].image} alt="slide" className="carousel-image" />
+      <img   key={index} src={slides[index].image} alt="slide" className="carousel-image" />
       <div className="carousel-overlay">
         <h2 className="carousel-text">
           {words.map((word, i) => (

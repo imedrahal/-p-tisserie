@@ -158,7 +158,11 @@
   );
   border-radius: 12px 0 0 12px;
   transition: width 0.6s ease;
+  
+  border: 2px solid white;          /* Bordure blanche */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);  /* Lueur blanche subtile */
 }
+
 
 @media (max-width: 1000px) {
   .Background-FollowUs {

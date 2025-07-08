@@ -39,7 +39,10 @@ function FullPage() {
       <div id="OurSkills">
         <OurSkills />
       </div>
+       <div id="FollowUs">
       <FollowUs />
+      </div>
+      
     </>
   );
 }
