@@ -117,6 +117,15 @@ const ProductDetails = () => {
   };
 
   return (
+      <>
+       <div className="hero-banner">
+      <img
+        src="http://www.nicdark-themes.com/themes/food/wp/demo/sweet-cake/wp-content/uploads/sites/2/2019/04/parallax2.jpg"
+        alt="Banner"
+        className="hero-image"
+      />
+      <div className="hero-text">Price</div>
+    </div>
     <div className="product-container">
       <div className="product-main">
         <img src={product.image} alt={product.name} className="main-image" />
@@ -133,12 +142,12 @@ const ProductDetails = () => {
       </div>
 
       <div className="tabs">
-        <h4>Description</h4>
+        <h4 style={{textAlign: "center"}}>Description</h4>
         <p>{product.description}</p>
       </div>
 
       <div className="related-section">
-        <h3>Related products</h3>
+        <h3 style={{textAlign: "center"}}>Related products</h3>
         <div className="carousel-controls">
           <button className="carousel-btn" onClick={handlePrev} disabled={startIndex === 0}>
             <FaChevronLeft />
@@ -159,6 +168,7 @@ const ProductDetails = () => {
       </div>
       <ToastContainer />
     </div>
+    </>
   );
 };
 
