@@ -146,6 +146,7 @@ const ProductDetails = () => {
         <p>{product.description}</p>
       </div>
 
+
       <div className="related-section">
         <h3 style={{textAlign: "center"}}>Related products</h3>
         <div className="carousel-controls">
